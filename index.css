@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #222;
+    color: #fff;
+}
+
+.container {
+    background: linear-gradient(45deg, rgba(12,73,162,1) 0%, rgba(0,211,255,1) 72%);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    padding: 20px;
+    gap: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+header button {
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+}
+
+header button img {
+    height: 100%;
+}
+
+header input {
+    border: none;
+    border-radius: 20px;
+    height: 30px;
+    padding: 10px;;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.main-details {
+    text-align: center;
+    gap: 10px;
+}
+
+.main-details h1 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.main-details h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.main-details img {
+    height: 150px;
+}
+
+.additional-details {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+
+.humidity img, .wind-speed img {
+    height: 35px;
+}
+
+.humidity, .wind-speed {
+    display: flex;
+    gap: 10px;
+}
+
+#humidity-value, #wind-speed-value {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.humidity p, .wind-speed p {
+    font-size: 12px;
+}
