@@ -10,12 +10,12 @@
 <body>
     <div class="container">
         <header>
-            <input type="text" >
-            <button><img src="assets/search.png" alt="search icon"></button>
+            <input type="text" id="city-input">
+            <button><img src="assets/search.png" alt="search icon" onclick="getWeatherData()"></button>
         </header>
         <main>
             <div class="main-details">
-                <img src="assets/clear.png" alt="sun">
+                <img src="assets/clear.png" alt="sun" id="weather-status">
                 <h1 id="temp">0°c</h1>
                 <h2 id="city">City</h2>  
             </div>
