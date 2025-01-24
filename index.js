@@ -6,10 +6,17 @@ let isMainExpanded = false;
 async function getWeatherData() {
     let city = document.getElementById("city-input").value;
     const response = await fetch(apiUrl + `&appid=${apiKey}&q=${city}`);
-    var data = await response.json();
-    console.log(data);
+    var data = await response.json();   
+    let error = document.querySelector(".error");
+    error.style.display = "none";
 
-    if (city.toLowerCase() == data.name.toLowerCase()) {
+    if (data.cod === "404" ) {
+        isMainExpanded = false;
+        error.style.display = "block";
+        document.getElementById("main").style.visibility = "hidden";
+        document.getElementById("main").classList.remove("expanded");
+        return;
+    } else {
         let weatherStatus = data.weather[0].main;
     
         if (weatherStatus == "Clear") {
@@ -35,10 +42,7 @@ async function getWeatherData() {
             document.getElementById("main").style.visibility = "visible";
             document.getElementById("main").classList.toggle("expanded");
             isMainExpanded = true;
-        }
-        
-    } else {
-        document.querySelector(".error").style.display = "block";
+        } 
     }
     }
    
