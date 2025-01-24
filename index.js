@@ -1,7 +1,9 @@
 const apiKey = "306cba98287d314de60d34d0e1c10474";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?&units=metric";
 let isMainExpanded = false;
+const searchButton = document.getElementById("search-icon");
 
+searchButton.addEventListener("click", getWeatherData);
 
 async function getWeatherData() {
     let city = document.getElementById("city-input").value;
