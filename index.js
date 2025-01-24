@@ -10,7 +10,7 @@ async function getWeatherData() {
     let error = document.querySelector(".error");
     error.style.display = "none";
 
-    if (data.cod === "404" ) {
+    if (data.cod === 404 ) {
         isMainExpanded = false;
         error.style.display = "block";
         document.getElementById("main").style.visibility = "hidden";
