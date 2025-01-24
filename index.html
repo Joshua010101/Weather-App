@@ -13,7 +13,10 @@
             <input type="text" id="city-input">
             <button><img src="assets/search.png" alt="search icon" onclick="getWeatherData()"></button>
         </header>
-        <main>
+        <div class="error">
+            <p>City not found</p>
+        </div>
+        <main id="main">
             <div class="main-details">
                 <img src="assets/clear.png" alt="sun" id="weather-status">
                 <h1 id="temp">0°c</h1>
